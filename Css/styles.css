@@ -35,7 +35,7 @@ img {
 
 audio {
     background-color: blue;
-    width: 300px;  /* o el tamaño que prefieras */
+    width: 300px;
     max-width: 100%;
     border: 1px solid red;
     margin-bottom: 10px;
@@ -82,18 +82,11 @@ table, th, td {
 
 .noticias {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;       /* Siempre en fila */
+    gap: 20px;                 /* Espacio entre noticias */
 }
 
-@media (min-width: 960px) {
-    .noticias {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .noticia {
-        flex: 1;
-        margin: 0 5px;
-    }
+.noticia {
+    flex: 1;                   /* Ocupa el mismo espacio que sus hermanas */
+    min-width: 0;              /* Permite que se reduzcan si el espacio es pequeño */
 }
